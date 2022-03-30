@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function SearchCountry() {
-    const fetchCountries = () => {
-        fetch(`https://restcountries.com/v3.1/name/`)
+    const fetchCountries = (query) => {
+        fetch(`https://restcountries.com/v3.1/name/${query}`)
             .then(response => response.json())
             .then(json => setCountries(json.status !== 404 ? json : []))
     }

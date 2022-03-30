@@ -7,11 +7,11 @@ function Countries() {
             .then(countries => setCountries(countries));
     }
 
+    const [countries, setCountries] = useState([]);
+
     useEffect(() => {
         fetchCountries();
     });
-
-    const [countries, setCountries] = useState([]);
     
     const sortCountries = (sortOn) => {
         switch (sortOn) {
