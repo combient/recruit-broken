@@ -4,24 +4,28 @@ function Countries() {
     const fetchCountries = () => {
         fetch(`https://restcountries.com/v3.1/all`)
             .then(countries => countries.json())
-            .then(countries => setCountries());
+            .then(countries => setCountries(countries));
     }
 
     useEffect(() => {
         fetchCountries();
     });
 
-    const [sortDesc, setSortDirection] = useState(true);
     const [countries, setCountries] = useState([]);
     
     const sortCountries = (sortOn) => {
         switch (sortOn) {
             case 'name':
                 // Sort on name
+                break;
             case 'population':
                 // Sort on population
+                break;
             case 'size':
                 // Sort on size
+                break;
+            default:
+                break;
         }
     }
 
